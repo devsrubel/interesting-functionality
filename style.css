@@ -1,0 +1,125 @@
+.hide_first_svg{
+    display: none;
+}
+.ae-graph-container {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+}
+.ae-graph-container > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+#ae-graph-div {
+    z-index: 2;
+    width: calc(((320 / 16) * 1rem) + (1300 - 320) * ((100vw - 22.5rem) / (1920 - 320)));
+    margin: 0 auto;
+}
+.ae-graph-bar {
+    clip-path: polygon(0% 40px,100% 0%,100% 100%,0% 100%);
+}
+.ae-bar-red-stripe, .ae-bar-green-stripe {
+    clip-path: polygon(0% 40px,100% 0%,100% 15px,0% 100%);
+}
+.ae-graph-xaxis-labels {
+    color: white;
+    font-family: 'myriad-pro', Verdana, Arial, sans-serif;
+}
+.ae-graph-point-labels {
+    font-family: 'Gotham Black', Arial, sans-serif;
+
+}
+.ae-fia-production {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -60px auto 0px auto;
+    width: calc(((360 / 16) * 1rem) + (1000 - 360) * ((100vw - 22.5rem) / (1920 - 360)));
+}
+.ae-fia-production h3 {
+    padding-right: 20px;
+    color: white;
+    font-family: 'Gotham Black', Arial, sans-serif;
+    text-transform: uppercase;
+}
+.ae-fia-production p {
+    margin-top: 0px;
+    color: white;
+    font-family: 'myriad-pro', Verdana, Arial, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+}
+#ae-fia-input {
+    display: inline-block;
+    width: 2ch;
+    margin-top: 10px;
+    border: none;
+    background: none;
+    /* width: calc(((325 / 16) * 1rem) + (400 - 325) * ((100vw - 22.5rem) / (1920 - 325))); */
+}
+/* removes arrows from input in Chrome, Safari, Edge, & Opera */
+.ae-fia-field-wrapper input::-webkit-outer-spin-button, .ae-fia-field-wrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* removes arrows from input in Firefox */
+.ae-fia-field-wrapper input[type=number] {
+    -moz-appearance: textfield;
+    font-family: 'Gotham Black', Arial, sans-serif;
+    color: white;
+    font-size: 40px;
+}
+.ae-fia-field-wrapper input[type=number]::placeholder {
+    color: white;
+}
+.ae-fia-field-wrapper input[type=number]::before {
+    position: absolute;
+    top: 0;
+    content: attr(data-symbol);
+}
+.ae-fia-field-wrapper {
+    width: 300px;
+    margin: 5px 20px;
+    border: 5px solid var(--light-green);
+    padding: 10px 20px;
+}
+
+.ae-waves {
+    overflow-x: clip !important;
+    overflow-y: visible !important;
+}
+
+svg#ae-graph-waves {
+    z-index: 1;
+    overflow: visible;
+    width: calc(((220 / 16) * 1rem) + (1300 - 220) * ((100vw - 22.5rem) / (1920 - 220)));
+    height: 250px;
+    margin-bottom: -131px;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+    animation-name: move-left;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    }
+    .spacer{
+    height: 100px;
+    width: 100%;
+    }
+
+    @keyframes example {
+    0%   {
+        left:0px;
+        top:0px;}
+    
+    50%  {
+        left:-2000px;
+        top:200px;}
+    
+    100% {
+        left:0px; 
+        top:0px;}
+    }
+    body{
+        background-color: #000;
+    }
